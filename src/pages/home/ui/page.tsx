@@ -17,7 +17,11 @@ import {
   retrieveRawInitData,
 } from "@tma.js/sdk-react";
 import ExportIcon from "@/assets/export.svg?react";
-import { useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-query";
+import {
+  useMutation,
+  useQueryClient,
+  useSuspenseQuery,
+} from "@tanstack/react-query";
 import { getPro } from "@/shared/api/generated/pro/pro";
 
 const STAR_URL =
@@ -80,9 +84,16 @@ export const Page = () => {
         {pro.is_active ? (
           <>
             <div className="flex flex-col items-center pt-6 pb-4">
-              <CachedLottie animationUrl={STAR_URL} loop autoplay className="size-36" />
+              <CachedLottie
+                animationUrl={STAR_URL}
+                loop
+                autoplay
+                className="size-36"
+              />
               <div className="mt-4 text-center">
-                <Title level="3" weight="2">Pro obuna faol ⚡️</Title>
+                <Title level="3" weight="2">
+                  Pro obuna faol ⚡️
+                </Title>
                 <Text style={{ color: "var(--tg-theme-hint-color)" }}>
                   {pro.active_until
                     ? `${formatDate(new Date(pro.active_until))} gacha faol`
@@ -95,7 +106,9 @@ export const Page = () => {
               <Cell
                 before={<span className="text-xl">⚡️</span>}
                 after={
-                  <Caption style={{ color: "var(--tg-theme-accent-text-color)" }}>
+                  <Caption
+                    style={{ color: "var(--tg-theme-accent-text-color)" }}
+                  >
                     Faol
                   </Caption>
                 }
@@ -112,9 +125,16 @@ export const Page = () => {
         ) : (
           <>
             <div className="flex flex-col items-center pt-6 pb-4">
-              <CachedLottie animationUrl={STAR_URL} loop autoplay className="size-36" />
+              <CachedLottie
+                animationUrl={STAR_URL}
+                loop
+                autoplay
+                className="size-36"
+              />
               <div className="mt-4 text-center">
-                <Title level="3" weight="2">Pro obunani oling</Title>
+                <Title level="3" weight="2">
+                  Pro obunani oling
+                </Title>
               </div>
             </div>
 
@@ -193,24 +213,39 @@ export const Page = () => {
           </>
         )}
 
-        <Section className="rounded-section" header="Shuningdek foydali bo'lishi mumkin">
+        <Section
+          className="rounded-section"
+          header="Shuningdek foydali bo'lishi mumkin"
+        >
           <Cell
             before={<span className="text-xl">🎬</span>}
-            after={<ExportIcon width={20} height={20} style={{ color: "var(--tg-theme-hint-color)" }} />}
+            after={
+              <ExportIcon
+                width={20}
+                height={20}
+                style={{ color: "var(--tg-theme-hint-color)" }}
+              />
+            }
             description="Professional video muharrir"
             multiline
-            onClick={() => openTelegramLink("https://t.me/uicode")}
+            onClick={() => openTelegramLink("https://t.me/FreeGo_uz/36")}
           >
-            CapCut Pro
+            CapCut Pro sotib olish
           </Cell>
           <Cell
             before={<span className="text-xl">🤖</span>}
-            after={<ExportIcon width={20} height={20} style={{ color: "var(--tg-theme-hint-color)" }} />}
+            after={
+              <ExportIcon
+                width={20}
+                height={20}
+                style={{ color: "var(--tg-theme-hint-color)" }}
+              />
+            }
             description="OpenAI'ning kuchli AI-yordamchisi"
             multiline
-            onClick={() => openTelegramLink("https://t.me/uicode")}
+            onClick={() => openTelegramLink("https://t.me/FreeGo_uz/36")}
           >
-            ChatGPT Pro
+            ChatGPT Plus sotib olish
           </Cell>
         </Section>
       </List>
