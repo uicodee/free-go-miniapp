@@ -38,6 +38,19 @@ export const Page = () => {
   const referralLink = `https://t.me/FreeeeGo_bot?start=${me.referral_code}`;
 
   const [snackbarVisible, setSnackbarVisible] = useState(false);
+  const shareMessage = `🚀 FreeGo’da CANVA PRO — 30 KUN BEPUL!
+
+Premium imkoniyatlardan foydalanmoqchimisiz?
+Endi sizda ajoyib imkoniyat bor! 🎁
+
+🔥 30 kunlik CANVA PRO obuna
+🔥 Cheklangan joylar
+🔥 Tez va oson faollashtirish
+
+Barcha premium funksiyalarni sinab ko‘ring va natijani o‘zingiz his qiling!
+
+⏳ Joylar tugashidan oldin ulgurib qoling!
+👇 Hoziroq qo‘shiling!`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink);
@@ -47,7 +60,7 @@ export const Page = () => {
 
   const handleShare = () => {
     hapticFeedback.impactOccurred("light");
-    const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent("Free Go orqali bepul Pro obuna oling!")}`;
+    const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(shareMessage)}&text=${encodeURIComponent(referralLink)}`;
     openTelegramLink(shareUrl);
   };
 
