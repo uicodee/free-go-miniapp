@@ -35,7 +35,7 @@ export const Page = () => {
         headers: { Authorization: initDataRaw },
       }),
   });
-  const referralLink = `https://t.me/freego_bot?start=${me.referral_code}`;
+  const referralLink = `https://t.me/FreeeeGo_bot?start=${me.referral_code}`;
 
   const [snackbarVisible, setSnackbarVisible] = useState(false);
 
