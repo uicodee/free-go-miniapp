@@ -60,7 +60,8 @@ Barcha premium funksiyalarni sinab ko‘ring va natijani o‘zingiz his qiling!
 
   const handleShare = () => {
     hapticFeedback.impactOccurred("light");
-    const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(shareMessage)}&text=${encodeURIComponent(referralLink)}`;
+    const shareText = `${shareMessage}\n\n${referralLink}`;
+    const shareUrl = `https://t.me/share/url?text=${encodeURIComponent(shareText)}`;
     openTelegramLink(shareUrl);
   };
 

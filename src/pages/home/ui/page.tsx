@@ -202,14 +202,22 @@ export const Page = () => {
               </Cell>
             </Section>
 
-            <Button
-              size="m"
-              stretched
-              loading={claimMutation.isPending}
-              onClick={handleActivate}
-            >
-              Obunani faollashtirish
-            </Button>
+            {slotsLeft === 0 ? (
+              <div className="px-4 py-3 text-center">
+                <Text style={{ color: "var(--tg-theme-destructive-text-color)" }}>
+                  Joylar tugadi. Tez orada yangi link e'lon qilinadi!
+                </Text>
+              </div>
+            ) : (
+              <Button
+                size="m"
+                stretched
+                loading={claimMutation.isPending}
+                onClick={handleActivate}
+              >
+                Obunani faollashtirish
+              </Button>
+            )}
           </>
         )}
 
