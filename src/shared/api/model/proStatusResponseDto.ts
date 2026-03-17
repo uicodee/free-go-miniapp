@@ -11,9 +11,9 @@ export interface ProStatusResponseDto {
   active_until?: string | null;
   total_slots: number;
   taken_slots: number;
+  /** How many days Pro is granted for when claimed */
+  pro_days: number;
   promo_ends_at: string;
   /** @nullable */
   pro_url?: string | null;
-  /** How many days Pro is granted for when claimed */
-  pro_days: number;
 }

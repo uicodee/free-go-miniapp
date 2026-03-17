@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "api:download": "curl http://localhost:4000/swagger -o ./src/shared/api/schema.json",
+    "api:download": "curl http://localhost:3000/swagger -o ./src/shared/api/schema.json",
     "api:generate": "orval"
   },
   "dependencies": {

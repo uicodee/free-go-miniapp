@@ -8,6 +8,7 @@ import {
   viewport,
 } from "@tma.js/sdk-react";
 import { useEffect } from "react";
+import { ChannelsGate } from "@/widgets/channels-gate";
 
 export const App = () => {
   const lp = retrieveLaunchParams();
@@ -32,5 +33,9 @@ export const App = () => {
     closingBehavior.enableConfirmation();
   }, []);
 
-  return <RouterProvider router={router} />;
+  return (
+    <ChannelsGate>
+      <RouterProvider router={router} />
+    </ChannelsGate>
+  );
 };
